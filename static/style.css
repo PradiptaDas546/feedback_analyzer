@@ -26,3 +26,24 @@ button {
     border: none;
     border-radius: 5px;
 }
+
+/* Sentiment Result Styling */
+#sentiment {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.neutral {
+    color: gray;
+}
