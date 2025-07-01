@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Customer Feedback Analyzer</h2>
+    <form method="POST" action="/">
+        <label>Your Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Your Feedback:</label><br>
+        <textarea name="feedback" rows="5" cols="50" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if sentiment %}
+        <h3 style="color:white; text-align:center;">Sentiment Result: <strong>{{ sentiment }}</strong></h3>
+    {% endif %}
+
+    <p style="text-align:center; margin-top:20px;">
+        <a href="/chart" style="color:#00ffff;">📊 View Sentiment Pie Chart</a> |
+        <a href="/wordcloud" style="color:#90ee90;">🌥 View Word Cloud</a> |
+        <a href="/download" style="color:#ffcc00;">⬇ Download Excel</a>
+    </p>
+</body>
+</html>
