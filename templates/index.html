@@ -17,7 +17,9 @@
     </form>
 
     {% if sentiment %}
-        <h3 style="color:black; text-align:center;">Sentiment Result: <strong>{{ sentiment }}</strong></h3>
+        <p id="sentiment">
+            Sentiment Result: <span class="{{ sentiment_class }}">{{ sentiment }}</span>
+        </p>
     {% endif %}
 
     <p style="text-align:center; margin-top:20px;">
