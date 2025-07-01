@@ -89,9 +89,9 @@ def download():
     try:
         df = pd.read_csv("feedback.csv", names=["Name", "Feedback", "Sentiment"])
         df.to_excel("feedback.xlsx", index=False)
-        return "✅ Excel file 'feedback.xlsx' exported successfully!"
+        return "Excel file 'feedback.xlsx' exported successfully!"
     except Exception as e:
-        return f"❌ Failed to export: {str(e)}"
+        return f"Failed to export: {str(e)}"
 
 if __name__ == "__main__":
     app.run(debug=True)
