@@ -2,11 +2,38 @@
 <html>
 <head>
     <title>{{ chart_type }}</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        img {
+            border: 1px solid white;
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        a {
+            color: lightblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="background:#222; color:white; text-align:center; font-family:Arial;">
+<body>
     <h2>{{ chart_type }}</h2>
-    <img src="data:image/png;base64,{{ chart_url }}" alt="Chart" style="border:1px solid white; max-width:500px;" />
+    <img src="data:image/png;base64,{{ chart_url }}" alt="Chart" />
     <br><br>
-    <a href="/" style="color:lightblue;">← Back to Feedback Form</a>
+    <a href="/">← Back to Feedback Form</a>
 </body>
 </html>
